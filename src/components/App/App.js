@@ -64,10 +64,10 @@ class App extends Component {
           <AuthenticatedRoute user={user} exact path='/' render={() => (
             <div>
               <h2 className='welcome mt-3'>Socialize</h2>
-              <div className='card-container mt-5'>
-                <div className='row'>
+              <div className='mt-5'>
+                <div>
                   {people.map(person => (
-                    <div key={person.name} className='col-4 person-cards'>
+                    <div key={person.name} className='col-4'>
                       <Person
                         user={user}
                         key={person.name}
@@ -77,6 +77,7 @@ class App extends Component {
                         image={person.image}
                         zipcode={person.zipcode}
                         gender={person.gender}
+                        isLiked={person.isLiked}
                         msgAlert={this.msgAlert}
                       />
                     </div>

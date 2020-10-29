@@ -1,23 +1,25 @@
 $primary: rgb(246, 150, 114);
 @import '~bootstrap/scss/bootstrap';
 
-.person-card {
+.card {
   position: relative;
   background-color: rgb(255, 255, 255);
-  width: 600px;
+  color: rgb(255, 255, 255);
+  width: 500px;
+  max-width: 600px;
   padding: 20px;
-  height: 50vh;
-  box-shadow: 0 18px 53px rgba(0, 0, 0, 0.3);
+  margin-left: 600px;
+  height: 450px;
+  // box-shadow: 0 18px 53px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   background-size: cover;
   background-position: center;
 }
 
-.card-container {
+.person-card-container {
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
 }
-.person-cards {
+.swipe {
   position: absolute;
 }
