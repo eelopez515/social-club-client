@@ -9,6 +9,10 @@ import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 
+import Profile from '../Profile/Profile'
+import people from '../../people/people'
+import Person from '../Person/Person'
+
 class App extends Component {
   constructor () {
     super()
@@ -54,6 +58,33 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
+          <AuthenticatedRoute user={user} path='/profile' render={() => (
+            <Profile msgAlert={this.msgAlert} user={user} />
+          )}/>
+          <AuthenticatedRoute user={user} exact path='/' render={() => (
+            <div>
+              <h2 className='welcome mt-3'>Socialize</h2>
+              <div className='card-container mt-5'>
+                <div className='row'>
+                  {people.map(person => (
+                    <div key={person.name} className='col-4 person-cards'>
+                      <Person
+                        user={user}
+                        key={person.name}
+                        id={person.id}
+                        name={person.name}
+                        bio={person.bio}
+                        image={person.image}
+                        zipcode={person.zipcode}
+                        gender={person.gender}
+                        msgAlert={this.msgAlert}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}/>
         </main>
       </Fragment>
     )
