@@ -1,17 +1,17 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
-export const addPic = (picture) => {
+export const addUser = (picture) => {
   return axios({
     method: 'POST',
-    url: apiUrl + '/pictures',
+    url: apiUrl + '/user',
     data: picture
   })
 }
 
-export const showPics = (user) => {
+export const showUser = (user) => {
   return axios({
-    url: apiUrl + '/pictures',
+    url: apiUrl + '/user',
     method: 'GET',
     headers: {
       'Authorization': `Token token=${user.token}`

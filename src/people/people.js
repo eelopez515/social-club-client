@@ -5,7 +5,8 @@ export default [
     bio: 'I enjoy long walks on the beach especially during the night',
     image: 'https://i.imgur.com/rkie8r2.jpg',
     zipcode: 10001,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ export default [
     bio: 'I love working on my acting craft',
     image: 'https://i.imgur.com/v3tFzvr.jpg',
     zipcode: 10034,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ export default [
     bio: 'I am Captain America in real life',
     image: 'https://i.imgur.com/R9q996N.jpg',
     zipcode: 10014,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ export default [
     bio: 'Thor is my only good role, and even that is debatable',
     image: 'https://i.imgur.com/WPSIrzy.jpg',
     zipcode: 10462,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 5,
@@ -37,7 +41,8 @@ export default [
     bio: 'Ask what you want to know',
     image: 'https://i.imgur.com/GThF2j9.jpg',
     zipcode: 10014,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 6,
@@ -45,7 +50,8 @@ export default [
     bio: 'Making America Great Again?',
     image: 'https://i.imgur.com/9eSyyZQ.jpg',
     zipcode: 10034,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 7,
@@ -53,7 +59,8 @@ export default [
     bio: 'Successful Actress',
     image: 'https://i.imgur.com/sV91Ahd.jpg',
     zipcode: 10462,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   },
   {
     id: 8,
@@ -61,7 +68,8 @@ export default [
     bio: 'I am Wonder Woman',
     image: 'https://i.imgur.com/EuEwuyH.jpg',
     zipcode: 10034,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   },
   {
     id: 9,
@@ -69,7 +77,8 @@ export default [
     bio: 'Actor, Singer, and Producer',
     image: 'https://i.imgur.com/YtRwEaE.jpg',
     zipcode: 10001,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 10,
@@ -77,7 +86,8 @@ export default [
     bio: 'Enoy spending time with my beautiful family',
     image: 'https://i.imgur.com/uNT24Sd.jpg',
     zipcode: 10014,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   },
   {
     id: 11,
@@ -85,7 +95,8 @@ export default [
     bio: 'Love traveling the world',
     image: 'https://i.imgur.com/Jnu1Q9j.jpg',
     zipcode: 10034,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   },
   {
     id: 12,
@@ -93,7 +104,8 @@ export default [
     bio: 'Spending moments with the ones I love is my passion',
     image: 'https://i.imgur.com/q9JRSiS.jpg',
     zipcode: 10001,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   },
   {
     id: 13,
@@ -101,7 +113,8 @@ export default [
     bio: 'I have a monkey named Abu',
     image: 'https://i.imgur.com/L5Np417.jpg',
     zipcode: 10034,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 14,
@@ -109,7 +122,8 @@ export default [
     bio: 'I am of no relation to Michael Joran the basketball player',
     image: 'https://i.imgur.com/8zNLJW0.jpg',
     zipcode: 10014,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 15,
@@ -117,7 +131,8 @@ export default [
     bio: 'Acting is my passion, catch me on season 1 of Power',
     image: 'https://i.imgur.com/GMVMLMC.jpg',
     zipcode: 10001,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 16,
@@ -125,7 +140,8 @@ export default [
     bio: 'I am all about my work, work, work, work, WORK!',
     image: 'https://i.imgur.com/ou8Rat5.jpg',
     zipcode: 10034,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   },
   {
     id: 17,
@@ -133,7 +149,8 @@ export default [
     bio: 'I enjoy cooking and wine tasting',
     image: 'https://i.imgur.com/7xYDhXZ.jpg',
     zipcode: 10014,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   },
   {
     id: 18,
@@ -141,7 +158,8 @@ export default [
     bio: 'Love co-starring in cheesy love movies',
     image: 'https://i.imgur.com/XfzFMkw.jpg',
     zipcode: 10462,
-    gender: 'male'
+    gender: 'male',
+    isLiked: ''
   },
   {
     id: 19,
@@ -149,7 +167,8 @@ export default [
     bio: 'I enjoy spending quality time with my family',
     image: 'https://i.imgur.com/Qp9SspE.jpg',
     zipcode: 10034,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   },
   {
     id: 20,
@@ -157,6 +176,7 @@ export default [
     bio: 'I love all my Swifties',
     image: 'https://i.imgur.com/fi381iy.jpg',
     zipcode: 10001,
-    gender: 'female'
+    gender: 'female',
+    isLiked: ''
   }
 ]

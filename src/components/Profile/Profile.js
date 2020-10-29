@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { showLikes } from '../../api/likes'
 
 class Profile extends Component {
   constructor (props) {
@@ -9,6 +10,11 @@ class Profile extends Component {
       msgAlerts: []
     }
   }
+  componentDidMount () {
+    const user = this.props.user
+    showLikes(user)
+      .then(response => { console.log(response) })
+  }
   render () {
     return (
       <div>
@@ -18,7 +24,7 @@ class Profile extends Component {
         <p>Zipcode: {this.props.user.zipcode}</p>
         <p>Gender: {this.props.user.gender}</p>
         <p>Email: {this.props.user.email}</p>
-        <p>Likes: {this.props.user.likes}</p>
+        <p>Likes: {this.props.user.likes[1].name}</p>
       </div>
     )
   }
