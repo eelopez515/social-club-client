@@ -30,7 +30,7 @@ export const showLikes = (user) => {
   })
 }
 
-export const delteLike = (likeId, user) => {
+export const deleteLike = (likeId, user) => {
   return axios({
     url: apiUrl + '/likes/' + `${likeId}`,
     method: 'DELETE',

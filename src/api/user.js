@@ -1,17 +1,9 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
-export const addUser = (picture) => {
-  return axios({
-    method: 'POST',
-    url: apiUrl + '/user',
-    data: picture
-  })
-}
-
 export const showUser = (user) => {
   return axios({
-    url: apiUrl + '/user',
+    url: apiUrl + '/profile',
     method: 'GET',
     headers: {
       'Authorization': `Token token=${user.token}`
@@ -20,24 +12,14 @@ export const showUser = (user) => {
   })
 }
 
-export const updateUser = (data, userId, user) => {
+export const updateProfile = (user) => {
+  console.log(user)
   return axios({
-    url: apiUrl + '/user/' + `${userId}`,
+    url: apiUrl + '/update-profile',
     method: 'PATCH',
     headers: {
       'Authorization': `Token token=${user.token}`
     },
-    data: data
-  })
-}
-
-export const delteOrder = (userId, user) => {
-  return axios({
-    url: apiUrl + '/user/' + `${userId}`,
-    method: 'DELETE',
-    headers: {
-      'Authorization': `Token token=${user.token}`
-    },
-    data: {}
+    data: user
   })
 }
