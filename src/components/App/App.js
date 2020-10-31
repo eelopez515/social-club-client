@@ -10,6 +10,7 @@ import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 
 import Profile from '../Profile/Profile'
+import ProfileUpdate from '../Profile/ProfileUpdate'
 import people from '../../people/people'
 import Person from '../Person/Person'
 
@@ -32,8 +33,15 @@ class App extends Component {
   }
 
   render () {
+    const randomizePeople = array => {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]
+      }
+      return array
+    }
     const { msgAlerts, user } = this.state
-
+    const randomPerson = randomizePeople(people)
     return (
       <Fragment>
         <Header user={user} />
@@ -58,15 +66,18 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/profile' render={() => (
+          <AuthenticatedRoute user={user} exact path='/profile' render={() => (
             <Profile msgAlert={this.msgAlert} user={user} />
+          )}/>
+          <AuthenticatedRoute user={user} exact path='/update-profile' render={() => (
+            <ProfileUpdate msgAlert={this.msgAlert} user={user} />
           )}/>
           <AuthenticatedRoute user={user} exact path='/' render={() => (
             <div>
               <h2 className='welcome mt-3'>Socialize</h2>
               <div className='mt-5'>
                 <div>
-                  {people.map(person => (
+                  {randomPerson.map(person => (
                     <div key={person.name} className='col-4'>
                       <Person
                         user={user}

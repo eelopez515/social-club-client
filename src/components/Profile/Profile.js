@@ -1,30 +1,59 @@
 import React, { Component } from 'react'
-import { showLikes } from '../../api/likes'
+import { showLikes, deleteLike } from '../../api/likes'
+import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom'
 
 class Profile extends Component {
   constructor (props) {
-    console.log(props)
     super()
     this.state = {
       user: null,
-      msgAlerts: []
+      isLoaded: false,
+      msgAlerts: [],
+      likes: [],
+      isDeleted: false
     }
   }
   componentDidMount () {
     const user = this.props.user
     showLikes(user)
-      .then(response => { console.log(response) })
+      .then(response => (
+        this.setState({
+          likes: response.data.user[0].likes
+        })
+      ))
+  }
+  onClick = event => {
+    const user = this.props.user
+    const likeId = event.target.id
+    deleteLike(likeId, user)
+      .then(response => (
+        this.setState({
+          likes: response.data.user.likes
+        })
+      ))
   }
   render () {
+    const { likes } = this.state
     return (
-      <div>
+      <div className='profile'>
         <h2>Your Profile</h2>
+        <Link to="/update-profile">
+          Update Profile
+        </Link>
         <p>First Name: {this.props.user.firstName}</p>
         <p>Last Name: {this.props.user.lastName}</p>
         <p>Zipcode: {this.props.user.zipcode}</p>
         <p>Gender: {this.props.user.gender}</p>
         <p>Email: {this.props.user.email}</p>
-        <p>Likes: {this.props.user.likes[1].name}</p>
+        <div className='likes'>
+          <p>Likes:</p>{likes.map(like => (
+            <div key={like._id}>
+              <p className='like'>{like.name}</p>
+              <Button id={like._id} variant='primary' onClick={this.onClick}>Delete</Button>
+            </div>
+          ))}
+        </div>
       </div>
     )
   }

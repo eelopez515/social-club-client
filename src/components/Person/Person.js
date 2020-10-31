@@ -7,7 +7,6 @@ import { createLike } from '../../api/likes'
 
 class Person extends Component {
   constructor (props) {
-    console.log(props)
     super()
     this.state = {
       user: null,
