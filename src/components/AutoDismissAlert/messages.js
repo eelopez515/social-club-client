@@ -8,8 +8,8 @@ export default {
   changePasswordFailure: 'Failed to change passwords. Check your old password and try again.',
   onSwipeRight: 'You have liked ',
   onSwipeLeft: 'You did not like ',
-  onUpdateSuccess: 'You have successfully updated your profile',
+  onUpdateSuccess: 'You have successfully updated your profile, you will see the changes the next time you log in',
   onUpdateFailure: 'Update failed, try again',
-  onDeleteLikeSuccess: 'You have unliked ',
-  onDeleteLikeFailure: 'Try unliking again.'
+  onDeleteLikeSuccess: 'You have deleted a like',
+  onDeleteLikeFailure: 'Try deleting again'
 }

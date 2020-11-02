@@ -19,7 +19,6 @@ onClick = (event) => {
 onSwipe = direction => {
   const { user, msgAlert, name } = this.props
   const data = this.props
-  console.log('you swiped ', this.props)
   if (direction === 'right') {
     createLike(data, user)
       .then(response => (

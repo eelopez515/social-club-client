@@ -71,9 +71,13 @@ class ProfileUpdate extends Component {
           <h3>Update Profile</h3>
           <Form onSubmit={this.handleSubmit}>
             <Form.Group controlId='update'>
+              <Form.Label>First Name</Form.Label>
               <Form.Control name='firstName' type='text' value={this.state.value} onChange={this.handleChange} placeholder={user.firstName}/><br/>
+              <Form.Label>Last Name</Form.Label>
               <Form.Control name='lastName' type='text' value={this.state.value} onChange={this.handleChange} placeholder={user.lastName}/><br/>
+              <Form.Label>Gender</Form.Label>
               <Form.Control name='gender' type='text' value={this.state.value} onChange={this.handleChange} placeholder={user.gender}/><br/>
+              <Form.Label>Zipcode</Form.Label>
               <Form.Control name='zipcode' type='text' value={this.state.value} onChange={this.handleChange} placeholder={user.zipcode}/><br/>
               <Link to='/profile'>
                 <Button variant='primary' value='Cancel' className='update-button'>Cancel</Button>

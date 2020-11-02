@@ -17,7 +17,7 @@ class Profile extends Component {
     }
   }
   componentDidMount () {
-    const user = this.props.user
+    const { user } = this.props
     showLikes(user)
       .then(response => (
         this.setState({
@@ -30,7 +30,7 @@ class Profile extends Component {
   onClick = event => {
     const user = this.props.user
     const likeId = event.target.id
-    const { msgAlert, name } = this.props
+    const { msgAlert } = this.props
     deleteLike(likeId, user)
       .then(response => (
         this.setState({
@@ -40,7 +40,7 @@ class Profile extends Component {
       ))
       .then(() => msgAlert({
         heading: 'Like Deleted',
-        message: messages.onDeleteLikeSuccess + `${name}`,
+        message: messages.onDeleteLikeSuccess,
         variant: 'success'
       }))
       .catch(() => msgAlert({
