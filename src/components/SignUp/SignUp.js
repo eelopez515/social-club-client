@@ -39,7 +39,7 @@ class SignUp extends Component {
         message: messages.signUpSuccess,
         variant: 'success'
       }))
-      .then(() => history.push('/'))
+      .then(() => history.push('/social-club'))
       .catch(error => {
         this.setState({ firstName: '', lastName: '', zipcode: '', gender: '', email: '', password: '', passwordConfirmation: '' })
         msgAlert({
