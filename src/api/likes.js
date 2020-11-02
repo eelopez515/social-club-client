@@ -2,8 +2,6 @@ import apiUrl from '../apiConfig'
 import axios from 'axios'
 
 export const createLike = (data, user) => {
-  console.log('data is ', data)
-  console.log('user is ', user)
   return axios({
     method: 'POST',
     url: apiUrl + '/likes',
@@ -13,6 +11,10 @@ export const createLike = (data, user) => {
     data: {
       likes: {
         name: data.name,
+        bio: data.bio,
+        image: data.image,
+        zipcode: data.zipcode,
+        gender: data.gender,
         isLiked: true
       }
     }

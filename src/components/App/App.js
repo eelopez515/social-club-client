@@ -72,7 +72,7 @@ class App extends Component {
           <AuthenticatedRoute user={user} exact path='/update-profile' render={() => (
             <ProfileUpdate msgAlert={this.msgAlert} user={user} />
           )}/>
-          <AuthenticatedRoute user={user} exact path='/' render={() => (
+          <AuthenticatedRoute user={user} exact path='/social-club' render={() => (
             <div>
               <h2 className='welcome mt-3'>Socialize</h2>
               <div className='mt-5'>

@@ -23,3 +23,28 @@ $primary: rgb(246, 150, 114);
 .swipe {
   position: absolute;
 }
+
+.update-button {
+  margin: 2px;
+}
+
+.liked-card {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  width: 250px;
+  padding: 10px;
+  height: 200px;
+  margin-right: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.likes {
+  display: flex;
+}
+.delete-button {
+  margin-top: 2px;
+}

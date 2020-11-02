@@ -13,7 +13,6 @@ export const showUser = (user) => {
 }
 
 export const updateProfile = (user) => {
-  console.log(user)
   return axios({
     url: apiUrl + '/update-profile',
     method: 'PATCH',

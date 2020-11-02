@@ -5,5 +5,11 @@ export default {
   signInFailure: 'Failed to sign in. Check your email and password and try again.',
   signOutSuccess: 'Come back soon!',
   changePasswordSuccess: 'Password changed successfully!',
-  changePasswordFailure: 'Failed to change passwords. Check your old password and try again.'
+  changePasswordFailure: 'Failed to change passwords. Check your old password and try again.',
+  onSwipeRight: 'You have liked ',
+  onSwipeLeft: 'You did not like ',
+  onUpdateSuccess: 'You have successfully updated your profile',
+  onUpdateFailure: 'Update failed, try again',
+  onDeleteLikeSuccess: 'You have unliked ',
+  onDeleteLikeFailure: 'Try unliking again.'
 }
