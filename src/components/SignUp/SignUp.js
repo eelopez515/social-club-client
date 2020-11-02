@@ -94,7 +94,6 @@ class SignUp extends Component {
             <Form.Group controlId="gender">
               <Form.Label>Gender</Form.Label>
               <Form.Control
-                required
                 type="text"
                 name="gender"
                 value={gender}

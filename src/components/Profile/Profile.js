@@ -64,7 +64,8 @@ class Profile extends Component {
           <p>Gender: {this.props.user.gender}</p>
           <p>Email: {this.props.user.email}</p>
           <div className='likes'>
-            <p>Likes:</p>{likes.map(like => (
+            <p>Likes:</p>
+            {likes.map(like => (
               <TinderCard
                 className='liked-card-container'
                 key={like.name}
